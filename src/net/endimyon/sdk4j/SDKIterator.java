@@ -181,9 +181,10 @@ class SDKIterator {
             if (!(currentBlocks.get(defaultIndex[i])).isBlockFull()) {
                 emptyLoop = 0;
                 runCandidateIterator(defaultIndex[i]);
+                blockSets.remove(0);
                 if (!solved) {
                     currentBlockSet++;
-                    currentBlocks = blockSets.get(currentBlockSet);
+                    currentBlocks = blockSets.get(0);
                     for (int blk = 0; blk < 9; blk++) {
                         (currentBlocks.get(blk)).archive();
                         (currentBlocks.get(blk)).rebuildCandidates();
