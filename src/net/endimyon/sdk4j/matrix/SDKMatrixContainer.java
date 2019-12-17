@@ -9,6 +9,7 @@ import java.util.List;
 
 public class SDKMatrixContainer {
     private List<SDKBlock> bs = new ArrayList<>();
+    private static int count = 1;
 
     public SDKMatrixContainer(List<SDKBlock> blockSet) {
         SDKLogger.log.info("Building new matrix.");
@@ -60,6 +61,8 @@ public class SDKMatrixContainer {
     }
 
     public List<SDKBlock> copyBlockSet() {
+        count++;
+        SDKLogger.log.info("Now there are " + count + " block sets in the list.");
         return this.bs;
     }
 }
