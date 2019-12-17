@@ -315,7 +315,6 @@ class SDKIterator {
                     if ((new SDKMatrix(currentBlocks)).checkMatrix()) {
                         blockSets.add(new SDKMatrixContainer(currentBlocks).copyBlockSet());
                     }
-                    SDKLogger.log.info("This is the " + (blockSets.size() - 1) + "st/nd/rd/th block of the collection.");
                 } else {
                     SDKLogger.log.info("Used up all possibilities. Turn to newly added matrices.");
                     globalPhase.clear();
